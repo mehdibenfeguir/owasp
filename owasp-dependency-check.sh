@@ -16,7 +16,7 @@
         fi
         
         # Make sure we are using the latest version
-        
+        apt-get install docker
          docker pull owasp/dependency-check:$DC_VERSION
         
          docker run --rm \
