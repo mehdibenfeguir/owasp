@@ -16,9 +16,7 @@
         fi
         
         # Make sure we are using the latest version
-         docker status
          docker pull owasp/dependency-check:$DC_VERSION
-        
          docker run --rm \
             -e user=$USER \
             -u $(id -u ${USER}):$(id -g ${USER}) \
