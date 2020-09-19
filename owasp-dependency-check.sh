@@ -16,7 +16,7 @@
         fi
         
         # Make sure we are using the latest version
-        systemctl start docker
+        
         sudo docker pull owasp/dependency-check:$DC_VERSION
         
         sudo docker run --rm \
