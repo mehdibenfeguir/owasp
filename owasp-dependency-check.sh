@@ -20,7 +20,6 @@
          docker run --rm \
             -e user=$USER \
             -u $(id -u ${USER}):$(id -g ${USER}) \
-            -Ddownloader.quick.query.timestamp=false
             --volume $(pwd):/src:z \
             --volume "$DATA_DIRECTORY":/usr/share/dependency-check/data:z \
             --volume $(pwd)/odc-reports:/report:z \
