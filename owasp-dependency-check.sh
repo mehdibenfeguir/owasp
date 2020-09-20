@@ -28,6 +28,6 @@
             --format "ALL" \
             --project "$DC_PROJECT" \
             --out /report
-            --cveUrlBase
+            --cveUrlBase https://jeremylong.github.io/DependencyCheck/dependency-check-cli/arguments.html
             # Use suppression like this: (where /src == $pwd)
             # --suppression "/src/security/dependency-check-suppression.xml"
