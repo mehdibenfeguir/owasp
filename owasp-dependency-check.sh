@@ -28,5 +28,6 @@
             --format "ALL" \
             --project "$DC_PROJECT" \
             --out /report
+            --cveUrlBase
             # Use suppression like this: (where /src == $pwd)
             # --suppression "/src/security/dependency-check-suppression.xml"
