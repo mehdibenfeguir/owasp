@@ -20,6 +20,7 @@
          docker run --rm \
             -e user=$USER \
             -u $(id -u ${USER}):$(id -g ${USER}) \
+            -Ddownloader.quick.query.timestamp=false
             --volume $(pwd):/src:z \
             --volume "$DATA_DIRECTORY":/usr/share/dependency-check/data:z \
             --volume $(pwd)/odc-reports:/report:z \
@@ -28,5 +29,6 @@
             --format "ALL" \
             --project "$DC_PROJECT" \
             --out /report
+            
             # Use suppression like this: (where /src == $pwd)
             # --suppression "/src/security/dependency-check-suppression.xml"
