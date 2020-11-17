@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "d5ef7e32-5484-4600-af91-31b63ee83ded",
+		"name": "Establishment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetEstablishmentTransactionFees",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "correlationId",
+						"value": "1234",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://172.25.74.23:8081/api/establishments/cr-number/1010496687/from-date/10-15-2000/to-date/10-15-2000/transaction-fees",
+					"protocol": "http",
+					"host": [
+						"172",
+						"25",
+						"74",
+						"23"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"establishments",
+						"cr-number",
+						"1010496687",
+						"from-date",
+						"10-15-2000",
+						"to-date",
+						"10-15-2000",
+						"transaction-fees"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetEstablishmentTransactionFees",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "correlationId",
+								"value": "1234",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{host}}/api/establishments/cr-number/1010496687/from-date/10-15-2000/to-date/10-15-2000/transaction-fees",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"establishments",
+								"cr-number",
+								"1010496687",
+								"from-date",
+								"10-15-2000",
+								"to-date",
+								"10-15-2000",
+								"transaction-fees"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8; skipnullon=\"everywhere\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "678"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Nov 2020 07:35:16 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"GetEstablishmentTransactionFeesResponse\": {\n        \"GetEstablishmentTransactionFeesResult\": {\n            \"EstablishmentData\": {\n                \"EstablishmentName\": \"مطعم فلافل رتوة الشام لتقديم الوجبات\",\n                \"LaborOfficeId\": \"1\",\n                \"SequanceNumber\": \"1551634\",\n                \"CommercialRecordNumber\": \"1010496687\",\n                \"Saudis\": \"0.00\",\n                \"Foreigners\": \"2.00\",\n                \"TotalLaborers\": \"2.00\",\n                \"UnifiedTotalLabores\": \"2\",\n                \"ActivityName\": \"محلات تقديم وجبات الفول والحمص وما شابهها\",\n                \"Nitaq\": \"اخضر صغير (فئة أ)\",\n                \"EconomicActivityId\": \"6561022\"\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "GetEnterpriseBasicInfo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "correlationId",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cr-number\": \"1010019839\",\n\t\"labor-office-id\": 1,\n\"sequance-number\": 322,\n\"establishment-id\": 123,\n\" seven-hundred\": 1023128497}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.25.74.23:8081/api/establishments/search-enterprise-basic-info",
+					"protocol": "http",
+					"host": [
+						"172",
+						"25",
+						"74",
+						"23"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"establishments",
+						"search-enterprise-basic-info"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetEnterpriseBasicInfo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "correlationId",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cr-number\": \"1010019839\",\n\t\"labor-office-id\": 1,\n\"sequance-number\": 322,\n\"establishment-id\": 123,\n\" seven-hundred\": 1023128497}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/establishments/search-enterprise-basic-info",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"establishments",
+								"search-enterprise-basic-info"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8; skipnullon=\"everywhere\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "690"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 Nov 2020 11:22:34 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"GetEnterpriseBasicInfoResponse\": {\n        \"GetEnterpriseBasicInfoResult\": {\n            \"EnterpriseBasicInfo\": [\n                {\n                    \"EstablishmentName\": \"مؤسسة محمد عقيلي للمقاولات لصاحبهامحمدفتح الدين عقيلي\",\n                    \"EstablishmentStatus\": \"قائمة\",\n                    \"CRNumber\": \"1010019839\",\n                    \"LaborOfficeId\": \"1\",\n                    \"SequanceNumber\": \"322\",\n                    \"SevenHundred\": \"\",\n                    \"UnifiedTotalLaborers\": \"22\",\n                    \"CRTotalLaborers\": \"0\",\n                    \"CRSaudiLaborers\": \"0\",\n                    \"NitaqColour\": \"\",\n                    \"EntityTotalLaborers\": \"0\",\n                    \"ISIC4Id\": \"0\",\n                    \"ISIC4Name\": \"\"\n                }\n            ]\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "GetVisaDetails",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "correlationId",
+						"value": "123",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"visa-no\": \"1300715534\",\n\"id-no\": \"1061176697\",\n\"not-in-job-list\": [\n\t111011 ],\n\"in-job-list\": [\n\t9114034],\n\"page\": 1,\n\"limit\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.25.74.23:8081/api/establishments/visa-details",
+					"protocol": "http",
+					"host": [
+						"172",
+						"25",
+						"74",
+						"23"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"establishments",
+						"visa-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEstablishmentAllDataByCR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "correlationId",
+						"value": "123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"cr-number\": \"123\",\n\"labor-office-id\": 1,\n\"sequance-number\": 123,\n\"establishment-id\": 123,\n\"establishment-status-id\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.25.74.23:8081/api/establishments/all-data-by-cr?=",
+					"protocol": "http",
+					"host": [
+						"172",
+						"25",
+						"74",
+						"23"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"establishments",
+						"all-data-by-cr"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
